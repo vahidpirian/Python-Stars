@@ -184,6 +184,36 @@ def Show(func):
                     print()
                 print()
 
+
+            elif Char == "P":
+                for row in range(0, 9):
+                    for column in range(0, 9):
+                        if (column == 1 or (row == 0 or row == 4) and (column > 2 and column < 8) \
+                                or (column == 8 and row < 4 and row > 0)):
+                            print(end="*")
+                        else:
+                            print(end=" ")
+                    print()
+                print()
+
+
+            elif Char == "Q":
+                i = 5
+                j = 6
+                for row in range(0, 9):
+                    for column in range(0, 9):
+                        if ((column == 1 or column == 8 and (row < 7)) and (row != 0 and row != 8) \
+                                or (row == 0 or row == 8 and (column < 5)) and (column > 1 and column < 8)):
+                            print(end="*")
+                        elif column == i and row == j:
+                            i = i + 1
+                            j = j + 1
+                            print(end="*")
+                        else:
+                            print(end=" ")
+                    print()
+                print()
+
         func(Name)
     return Your_Name
 
