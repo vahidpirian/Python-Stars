@@ -330,7 +330,7 @@ def Show(func):
     return Your_Name
 
 @Show
-def vahid(Name):
+def Get_Name(Name):
     return Name
 
-vahid(input("Please enter your name: "))
+Get_Name(input("Please enter your name: "))
