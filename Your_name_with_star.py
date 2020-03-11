@@ -73,6 +73,72 @@ def Show(func):
                 print()
 
 
+            elif Char == "G":
+                for row in range(0, 9):
+                    for column in range(0, 9):
+                        if ((column == 1 and row != 0 and row != 8) or (
+                                (row == 0 or row == 8) and column > 1 and column < 8) \
+                                or (row == 4 and column > 4) or (column == 8 and row == 1) or (
+                                        column == 8 and row > 4 and row < 8)):
+                            print(end="*")
+                        else:
+                            print(end=" ")
+                    print()
+                print()
+
+
+            elif Char == "H":
+                for row in range(0, 9):
+                    for column in range(0, 9):
+                        if (column == 1 or column == 8 or (row == 4 and column > 1)):
+                            print(end="*")
+                        else:
+                            print(end=" ")
+                    print()
+                print()
+
+
+            elif Char == "I":
+                for row in range(0, 9):
+                    for column in range(0, 9):
+                        if (column == 4 and row > 1 or (row == 1 or row == 8)):
+                            print(end="*")
+                        else:
+                            print(end=" ")
+                    print()
+                print()
+
+
+            elif Char == "J":
+                for row in range(0, 9):
+                    for column in range(0, 9):
+                        if (row == 0 or (column == 4 and row < 8) \
+                                or (row == 8 and column == 3) or (row == 7 and column == 1)):
+                            print(end="*")
+                        else:
+                            print(end=" ")
+                    print()
+                print()
+
+
+            elif Char == "K":
+                i = 0
+                j = 8
+                for row in range(0, 9):
+                    for column in range(0, 9):
+                        if (column == 1 or (row == column) and row >= 4):
+                            print(end="*")
+                        elif row == i and column == j:
+                            print(end="*")
+                            i = i + 1
+                            j = j - 1
+                        else:
+                            print(end=" ")
+                    print()
+                print()
+
+
+
 
         func(Name)
     return Your_Name
