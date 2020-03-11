@@ -246,6 +246,40 @@ def Show(func):
                 print()
 
 
+            elif Char == "T":
+                for row in range(0, 9):
+                    for column in range(0, 9):
+                        if (row == 0 and column > 0 and column < 8 or column == 4):
+                            print(end="*")
+                        else:
+                            print(end=" ")
+                    print()
+                print()
+
+
+            elif Char == "U":
+                for row in range(0, 9):
+                    for column in range(0, 9):
+                        if (column == 1 and row < 8) or (row == 8 and column > 1 and column < 8) \
+                                or (column == 8 and row < 8):
+                            print(end="*")
+                        else:
+                            print(end=" ")
+                    print()
+                print()
+
+
+            elif Char == "V":
+                for row in range(0, 10):
+                    for column in range(0, 10):
+                        if (column == 1 and row < 8 or column == 9 and row < 8) or (column == 3 and row == 8) \
+                                or (column == 7 and row == 8) or (column == 5 and row == 9):
+                            print(end="*")
+                        else:
+                            print(end=" ")
+                    print()
+                print()
+
 
         func(Name)
     return Your_Name
