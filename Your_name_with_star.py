@@ -14,6 +14,7 @@ def Show(func):
                     print()
                 print()
 
+
             elif Char == "B":
                 for row in range(0, 9):
                     for column in range(0, 9):
@@ -31,6 +32,40 @@ def Show(func):
                     for column in range(0, 9):
                         if ((column == 1) and (row != 0 and row != 8) or (column == 8) and (row == 1 or row == 7) \
                                 or (row == 0 or row == 8) and (column > 1 and column < 8)):
+                            print(end="*")
+                        else:
+                            print(end=" ")
+                    print()
+                print()
+
+
+            elif Char == "D":
+                for row in range(0, 9):
+                    for column in range(0, 9):
+                        if ((column == 1 or column == 8) and (row != 0 and row != 8) \
+                                or ((row == 0 or row == 8) and (column > 0 and column < 8))):
+                            print(end="*")
+                        else:
+                            print(end=" ")
+                    print()
+                print()
+
+
+            elif Char == "E":
+                for row in range(0, 9):
+                    for column in range(0, 9):
+                        if ((column == 1) or (row == 0 or row == 4 or row == 8) and (column > 1)):
+                            print(end="*")
+                        else:
+                            print(end=" ")
+                    print()
+                print()
+
+
+            elif Char == "F":
+                for row in range(0, 9):
+                    for column in range(0, 9):
+                        if (column == 1 or (row == 0 and column > 1) or (row == 4) and (column > 1 and column < 7)):
                             print(end="*")
                         else:
                             print(end=" ")
